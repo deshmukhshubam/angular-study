@@ -1,0 +1,40 @@
+div.block{
+    position: absolute; 
+    padding: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px grey;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+ }
+
+ div.block:hover{
+   box-shadow:  2px 2px 5px 5px rgb(80, 77, 77);
+ }
+ 
+ div.panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 70%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 400px;
+    background-color: rgba(236, 48, 20, 0.9);
+    border-radius: 20px;
+ }
+
+ .lgnbtn{
+  background-color: #444444;
+  color: #f9f9f9;
+  
+ }
+
+ .error{
+    color: red;
+ }

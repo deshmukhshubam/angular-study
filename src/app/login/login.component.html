@@ -1,0 +1,23 @@
+
+<form [formGroup]="loginform">
+<div class="container">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="block form-group">
+                        <h2>Login</h2>
+    <input class="form-control" type="text" placeholder="Username" formControlName="username"/>
+    <span *ngIf="username.touched && username.errors?.required" class="error">Username is required</span>
+    <span *ngIf="username.errors && username.errors.pattern" class="error">
+        Username must be a valid email id
+    </span><br>
+    <input class="form-control" type="password" placeholder="Password" formControlName="password"/>
+    <span *ngIf="password.touched && password.errors?.required" class="error">Password is required</span><br>
+    <button class="btn lgnbtn" [disabled]="loginform.invalid" (click)="Login(loginform.value)">Login</button><br><br>
+                        <a href="">Forgot Password?</a>
+                    </div> 
+                </div>
+            </div>    
+    </div>
+</div>
+</form>

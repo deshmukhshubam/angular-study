@@ -1,0 +1,32 @@
+<!-- <ng2-smart-table [settings]="settings" [source]="employees"></ng2-smart-table> -->
+ <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <span>Search: </span><input type="text" [(ngModel)]="userFilter.Name" placeholder="Search by name">
+        </div>
+        <div class="col-md-6">
+                <h2>Employee List</h2>
+     
+                <table class="table table-dark table-striped">
+                  <thead>
+                    <tr>
+                      <th><a (click)="setby('Id')">Id</a></th>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Country</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let emp of employees | filterBy: userFilter | orderBy: order: reverse">
+                      <td><a (click)="search(emp.Id)">{{emp.Id}}</a></td>
+                      <td>{{emp.Name}}</td>
+                      <td>{{emp.Age}}</td>
+                      <td>{{emp.Country}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+        </div>
+    </div>
+   
+ </div> 
+

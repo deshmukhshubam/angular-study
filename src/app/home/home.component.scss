@@ -1,0 +1,15 @@
+ div.block{
+    width: 200px;
+    height: 100px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px grey;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    
+ }
+
+ div.block:hover{
+   box-shadow:  2px 2px 5px 5px aquamarine;
+ }
+ 
